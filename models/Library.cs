@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.models
 {
-    public class LIbrary
+    public class Library
     {
         
     }
