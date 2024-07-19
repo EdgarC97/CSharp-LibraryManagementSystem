@@ -7,6 +7,14 @@ namespace LibraryManagementSystem.models
 {
     public class Publication
     {
-        
+        public string? Title { get; set; }
+        public DateOnly PublicationYear { get; set; }
+
+        public Publication(string title, DateOnly publicationYear)
+        {
+            Title = title;
+            PublicationYear = publicationYear;
+        }
     }
 }
+

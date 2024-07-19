@@ -7,6 +7,6 @@ namespace LibraryManagementSystem.models
 {
     public class Library
     {
-        
+        private List<Book> books = new List<Book>();
     }
 }
