@@ -226,8 +226,8 @@ namespace LibraryManagementSystem.models
                 return;
             }
             // Imprime el encabezado de la tabla con las columnas para Título, Autor, ISBN, Género, Año y Precio
-            Console.WriteLine("| Título                 | Autor                 | ISBN           | Género    | Año  | Precio          |");
-            Console.WriteLine("|------------------------|-----------------------|----------------|-----------|------|-----------------|");
+            Console.WriteLine("| Título                 | Autor                 | ISBN           | Género    | Año  | Precio         |");
+            Console.WriteLine("|------------------------|-----------------------|----------------|-----------|------|----------------|");
 
             // Itera sobre cada libro en la colección y lo imprime en una fila de la tabla
             foreach (var book in books)
