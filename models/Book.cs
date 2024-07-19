@@ -22,5 +22,25 @@ namespace LibraryManagementSystem.models
             Genre = genre;
             Price = price;
         }
+        public void ApplyDiscount(decimal percentageDiscount)// Método para aplicar un descuento al precio del libro
+        {
+            decimal discount = Price * percentageDiscount / 100;// Calculo el monto del descuento
+            Price -= discount;// Resto el descuento al precio original
+        }
+
+        public bool IsRecent()// Método para determinar si el libro se publicó en los últimos 5 años
+        {
+            // Comparo el año de publicación con la fecha actual menos 5 años
+            return PublicationYear >= DateOnly.FromDateTime(DateTime.Now.AddYears(-5));
+        }
+        public void GetDetailedDescription()// Método para imprimir una descripción detallada del libro en la consola
+        {
+            Console.WriteLine($"Título: {Title}, Autor: {Author}, ISBN: {ISBN}, Género: {Genre}, Año de Publicación: {PublicationYear.Year}, Precio: {Price:C}");
+        }
+
+        public override string ToString()// Sobrescribo el método ToString() para devolver una cadena que representa el libro
+        {
+            return $"Título: {Title}, Autor: {Author}, ISBN: {ISBN}, Género: {Genre}, Año de Publicación: {PublicationYear.Year}, Precio: {Price:C}";
+        }
     }
 }
